@@ -54,7 +54,8 @@ To set up the SparkFun GPS-RTK Dead Reckoning Kit with ROS2, follow these steps:
     sudo chmod 666 /dev/ttyACM0
     ```
 
-   **If it's the difference port, you have to change at script file**
+   **If it's the difference port, you have to change at script file:    code /SparkFun-GPS-RTK-Dead-Reckoning-Kit/src/rtk/scripts/RTK_GPS.py and change the port at self.port**
+
 
 - To start publishing data from the SparkFun GPS-RTK Dead Reckoning Kit, use the following command to run the node:
 
