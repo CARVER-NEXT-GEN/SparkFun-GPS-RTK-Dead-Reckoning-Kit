@@ -44,6 +44,18 @@ To set up the SparkFun GPS-RTK Dead Reckoning Kit with ROS2, follow these steps:
 
 ## Usage
 
+- Connect the SparkFun GPS-RTK Dead Reckoning Breakout - ZED-F9R, SMA (Qwiic) and check the port by using the command below.
+   ```bash
+    ls /dev/tty*
+    ```
+
+- Find your device port and change the permission of it. (Assume that ttyACM0 for this package)
+   ```bash
+    sudo chmod 666 /dev/ttyACM0
+    ```
+
+   **If it's the difference port, you have to change at script file**
+
 - To start publishing data from the SparkFun GPS-RTK Dead Reckoning Kit, use the following command to run the node:
 
     ```bash
