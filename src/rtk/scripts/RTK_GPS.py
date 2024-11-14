@@ -23,7 +23,7 @@ class GPSNode(Node):
 
         self.nav_sat_pub = self.create_publisher(CarverNavSatFix, 'nav_sat_data',10)
         self.twist_cov_stamped = self.create_publisher(TwistWithCovarianceStamped, 'gnss_dopler_vel',10)
-        self.gps_pub = self.create_publisher(Float64MultiArray,"gps_data", 10)
+        # self.gps_pub = self.create_publisher(Float64MultiArray,"gps_data", 10)
 
         self.create_timer(0.05,self.timer_callback)
 
