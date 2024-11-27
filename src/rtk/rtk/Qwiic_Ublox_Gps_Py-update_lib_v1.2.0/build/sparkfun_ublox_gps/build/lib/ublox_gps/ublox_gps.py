@@ -72,7 +72,7 @@ class UbloxGps(object):
 
     def __init__(self, hard_port = None):
         if hard_port is None:
-            self.hard_port = serial.Serial("/dev/ttyACM0/", 115200, timeout=1)
+            self.hard_port = serial.Serial("/dev/serial0/", 38400, timeout=1)
         elif type(hard_port) == spidev.SpiDev:
             sfeSpi = sfeSpiWrapper(hard_port)
             self.hard_port = sfeSpi

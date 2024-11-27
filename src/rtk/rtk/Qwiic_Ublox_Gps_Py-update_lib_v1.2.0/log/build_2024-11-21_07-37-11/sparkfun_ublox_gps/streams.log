@@ -1,0 +1,35 @@
+[0.474s] Invoking command in '/home/tim/SparkFun-GPS-RTK-Dead-Reckoning-Kit/src/rtk/rtk/Qwiic_Ublox_Gps_Py-update_lib_v1.2.0': PYTHONPATH=/home/tim/SparkFun-GPS-RTK-Dead-Reckoning-Kit/src/rtk/rtk/Qwiic_Ublox_Gps_Py-update_lib_v1.2.0/build/sparkfun_ublox_gps/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/tim/SparkFun-GPS-RTK-Dead-Reckoning-Kit/src/rtk/rtk/Qwiic_Ublox_Gps_Py-update_lib_v1.2.0/install/sparkfun_ublox_gps/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base build/sparkfun_ublox_gps build --build-base /home/tim/SparkFun-GPS-RTK-Dead-Reckoning-Kit/src/rtk/rtk/Qwiic_Ublox_Gps_Py-update_lib_v1.2.0/build/sparkfun_ublox_gps/build install --record /home/tim/SparkFun-GPS-RTK-Dead-Reckoning-Kit/src/rtk/rtk/Qwiic_Ublox_Gps_Py-update_lib_v1.2.0/build/sparkfun_ublox_gps/install.log --single-version-externally-managed
+[0.636s] running egg_info
+[0.636s] creating build/sparkfun_ublox_gps/sparkfun_ublox_gps.egg-info
+[0.636s] writing build/sparkfun_ublox_gps/sparkfun_ublox_gps.egg-info/PKG-INFO
+[0.636s] writing dependency_links to build/sparkfun_ublox_gps/sparkfun_ublox_gps.egg-info/dependency_links.txt
+[0.636s] writing top-level names to build/sparkfun_ublox_gps/sparkfun_ublox_gps.egg-info/top_level.txt
+[0.636s] writing manifest file 'build/sparkfun_ublox_gps/sparkfun_ublox_gps.egg-info/SOURCES.txt'
+[0.637s] reading manifest file 'build/sparkfun_ublox_gps/sparkfun_ublox_gps.egg-info/SOURCES.txt'
+[0.637s] adding license file 'LICENSE'
+[0.637s] writing manifest file 'build/sparkfun_ublox_gps/sparkfun_ublox_gps.egg-info/SOURCES.txt'
+[0.638s] running build
+[0.638s] running build_py
+[0.638s] creating /home/tim/SparkFun-GPS-RTK-Dead-Reckoning-Kit/src/rtk/rtk/Qwiic_Ublox_Gps_Py-update_lib_v1.2.0/build/sparkfun_ublox_gps/build
+[0.638s] creating /home/tim/SparkFun-GPS-RTK-Dead-Reckoning-Kit/src/rtk/rtk/Qwiic_Ublox_Gps_Py-update_lib_v1.2.0/build/sparkfun_ublox_gps/build/lib
+[0.638s] creating /home/tim/SparkFun-GPS-RTK-Dead-Reckoning-Kit/src/rtk/rtk/Qwiic_Ublox_Gps_Py-update_lib_v1.2.0/build/sparkfun_ublox_gps/build/lib/ublox_gps
+[0.638s] copying ublox_gps/ublox_gps.py -> /home/tim/SparkFun-GPS-RTK-Dead-Reckoning-Kit/src/rtk/rtk/Qwiic_Ublox_Gps_Py-update_lib_v1.2.0/build/sparkfun_ublox_gps/build/lib/ublox_gps
+[0.638s] copying ublox_gps/core.py -> /home/tim/SparkFun-GPS-RTK-Dead-Reckoning-Kit/src/rtk/rtk/Qwiic_Ublox_Gps_Py-update_lib_v1.2.0/build/sparkfun_ublox_gps/build/lib/ublox_gps
+[0.638s] copying ublox_gps/__init__.py -> /home/tim/SparkFun-GPS-RTK-Dead-Reckoning-Kit/src/rtk/rtk/Qwiic_Ublox_Gps_Py-update_lib_v1.2.0/build/sparkfun_ublox_gps/build/lib/ublox_gps
+[0.638s] copying ublox_gps/sparkfun_predefines.py -> /home/tim/SparkFun-GPS-RTK-Dead-Reckoning-Kit/src/rtk/rtk/Qwiic_Ublox_Gps_Py-update_lib_v1.2.0/build/sparkfun_ublox_gps/build/lib/ublox_gps
+[0.638s] running install
+[0.638s] running install_lib
+[0.639s] creating /home/tim/SparkFun-GPS-RTK-Dead-Reckoning-Kit/src/rtk/rtk/Qwiic_Ublox_Gps_Py-update_lib_v1.2.0/install/sparkfun_ublox_gps/lib/python3.10/site-packages/ublox_gps
+[0.639s] copying /home/tim/SparkFun-GPS-RTK-Dead-Reckoning-Kit/src/rtk/rtk/Qwiic_Ublox_Gps_Py-update_lib_v1.2.0/build/sparkfun_ublox_gps/build/lib/ublox_gps/ublox_gps.py -> /home/tim/SparkFun-GPS-RTK-Dead-Reckoning-Kit/src/rtk/rtk/Qwiic_Ublox_Gps_Py-update_lib_v1.2.0/install/sparkfun_ublox_gps/lib/python3.10/site-packages/ublox_gps
+[0.639s] copying /home/tim/SparkFun-GPS-RTK-Dead-Reckoning-Kit/src/rtk/rtk/Qwiic_Ublox_Gps_Py-update_lib_v1.2.0/build/sparkfun_ublox_gps/build/lib/ublox_gps/core.py -> /home/tim/SparkFun-GPS-RTK-Dead-Reckoning-Kit/src/rtk/rtk/Qwiic_Ublox_Gps_Py-update_lib_v1.2.0/install/sparkfun_ublox_gps/lib/python3.10/site-packages/ublox_gps
+[0.639s] copying /home/tim/SparkFun-GPS-RTK-Dead-Reckoning-Kit/src/rtk/rtk/Qwiic_Ublox_Gps_Py-update_lib_v1.2.0/build/sparkfun_ublox_gps/build/lib/ublox_gps/__init__.py -> /home/tim/SparkFun-GPS-RTK-Dead-Reckoning-Kit/src/rtk/rtk/Qwiic_Ublox_Gps_Py-update_lib_v1.2.0/install/sparkfun_ublox_gps/lib/python3.10/site-packages/ublox_gps
+[0.639s] copying /home/tim/SparkFun-GPS-RTK-Dead-Reckoning-Kit/src/rtk/rtk/Qwiic_Ublox_Gps_Py-update_lib_v1.2.0/build/sparkfun_ublox_gps/build/lib/ublox_gps/sparkfun_predefines.py -> /home/tim/SparkFun-GPS-RTK-Dead-Reckoning-Kit/src/rtk/rtk/Qwiic_Ublox_Gps_Py-update_lib_v1.2.0/install/sparkfun_ublox_gps/lib/python3.10/site-packages/ublox_gps
+[0.639s] byte-compiling /home/tim/SparkFun-GPS-RTK-Dead-Reckoning-Kit/src/rtk/rtk/Qwiic_Ublox_Gps_Py-update_lib_v1.2.0/install/sparkfun_ublox_gps/lib/python3.10/site-packages/ublox_gps/ublox_gps.py to ublox_gps.cpython-310.pyc
+[0.641s] byte-compiling /home/tim/SparkFun-GPS-RTK-Dead-Reckoning-Kit/src/rtk/rtk/Qwiic_Ublox_Gps_Py-update_lib_v1.2.0/install/sparkfun_ublox_gps/lib/python3.10/site-packages/ublox_gps/core.py to core.cpython-310.pyc
+[0.643s] byte-compiling /home/tim/SparkFun-GPS-RTK-Dead-Reckoning-Kit/src/rtk/rtk/Qwiic_Ublox_Gps_Py-update_lib_v1.2.0/install/sparkfun_ublox_gps/lib/python3.10/site-packages/ublox_gps/__init__.py to __init__.cpython-310.pyc
+[0.643s] byte-compiling /home/tim/SparkFun-GPS-RTK-Dead-Reckoning-Kit/src/rtk/rtk/Qwiic_Ublox_Gps_Py-update_lib_v1.2.0/install/sparkfun_ublox_gps/lib/python3.10/site-packages/ublox_gps/sparkfun_predefines.py to sparkfun_predefines.cpython-310.pyc
+[0.646s] running install_egg_info
+[0.647s] Copying build/sparkfun_ublox_gps/sparkfun_ublox_gps.egg-info to /home/tim/SparkFun-GPS-RTK-Dead-Reckoning-Kit/src/rtk/rtk/Qwiic_Ublox_Gps_Py-update_lib_v1.2.0/install/sparkfun_ublox_gps/lib/python3.10/site-packages/sparkfun_ublox_gps-1.1.4-py3.10.egg-info
+[0.648s] running install_scripts
+[0.660s] writing list of installed files to '/home/tim/SparkFun-GPS-RTK-Dead-Reckoning-Kit/src/rtk/rtk/Qwiic_Ublox_Gps_Py-update_lib_v1.2.0/build/sparkfun_ublox_gps/install.log'
+[0.674s] Invoked command in '/home/tim/SparkFun-GPS-RTK-Dead-Reckoning-Kit/src/rtk/rtk/Qwiic_Ublox_Gps_Py-update_lib_v1.2.0' returned '0': PYTHONPATH=/home/tim/SparkFun-GPS-RTK-Dead-Reckoning-Kit/src/rtk/rtk/Qwiic_Ublox_Gps_Py-update_lib_v1.2.0/build/sparkfun_ublox_gps/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/tim/SparkFun-GPS-RTK-Dead-Reckoning-Kit/src/rtk/rtk/Qwiic_Ublox_Gps_Py-update_lib_v1.2.0/install/sparkfun_ublox_gps/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base build/sparkfun_ublox_gps build --build-base /home/tim/SparkFun-GPS-RTK-Dead-Reckoning-Kit/src/rtk/rtk/Qwiic_Ublox_Gps_Py-update_lib_v1.2.0/build/sparkfun_ublox_gps/build install --record /home/tim/SparkFun-GPS-RTK-Dead-Reckoning-Kit/src/rtk/rtk/Qwiic_Ublox_Gps_Py-update_lib_v1.2.0/build/sparkfun_ublox_gps/install.log --single-version-externally-managed

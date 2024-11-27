@@ -34,20 +34,30 @@
 import serial
 
 from ublox_gps import UbloxGps
-
+import struct
 port = serial.Serial('/dev/ttyACM0', baudrate=115200, timeout=1)
 gps = UbloxGps(port)
 
 def run():
-
+   
     try:
         print("Listening for UBX Messages")
         while True:
             try:
-                geo = gps.geo_coords()
-                print("Longitude: ", geo.lon) 
-                print("Latitude: ", geo.lat)
-                print("Heading of Motion: ", geo.headMot)
+                # geo = gps.geo_coords()
+                # print("Longitude: ", geo.lon) 
+                # print("Latitude: ", geo.lat)
+                # print("Heading of Motion: ", geo.headMot)
+
+                
+          
+                # float_val = struct.unpack('>f',geo.posCovNN)
+                # print(type(geo.posCovNN))
+                geo = gps.nav_cov_matrice()
+                print(geo.posCovValid)
+                print(geo.posCovNN)
+                # a = geo.posCovNN
+                
             except (ValueError, IOError) as err:
                 print(err)
 

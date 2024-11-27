@@ -72,7 +72,7 @@ class UbloxGps(object):
 
     def __init__(self, hard_port = None):
         if hard_port is None:
-            self.hard_port = serial.Serial("/dev/serial0/", 38400, timeout=1)
+            self.hard_port = serial.Serial("/dev/ttyACM0/", 115200, timeout=1)
         elif type(hard_port) == spidev.SpiDev:
             sfeSpi = sfeSpiWrapper(hard_port)
             self.hard_port = sfeSpi
@@ -221,6 +221,21 @@ class UbloxGps(object):
         parse_tool = core.Parser([sp.NAV_CLS])
         cls_name, msg_name, payload = parse_tool.receive_from(self.hard_port)
         s_payload = self.scale_NAV_HPPOSLLH(payload)
+        return s_payload
+    
+    def nav_cov_matrice(self):
+        """
+        Sends a poll request for the NAV class with the HPPOSLLH Message ID and
+        parses ublox messages for the response. The payload is extracted from
+        the response which is then passed to the user.
+
+        :return: The payload of the NAV Class and HPPOSLLH Message ID
+        :rtype: namedtuple
+        """
+        self.send_message(sp.NAV_CLS, self.nav_ms.get('COV'))
+        parse_tool = core.Parser([sp.NAV_CLS])
+        cls_name, msg_name, payload = parse_tool.receive_from(self.hard_port)
+        s_payload = self.scale_NAV_COV(payload)
         return s_payload
 
     def date_time(self):
@@ -655,8 +670,9 @@ class UbloxGps(object):
         :rtype: namedtuple
         """
 
-        # longitude = nav_payload.lon
-        # latitude = nav_payload.lat
+        longitude = nav_payload.lon
+        latitude = nav_payload.lat
+        altitude = nav_payload.height
         # head_mot = nav_payload.headMot
         # head_acc = nav_payload.headAcc
         # pos_dop = nav_payload.pDOP
@@ -666,8 +682,9 @@ class UbloxGps(object):
         gnn_fixtype = nav_payload.fixType
         
 
-        # nav_payload = nav_payload._replace(lon=longitude *(10**-7))
-        # nav_payload = nav_payload._replace(lat=latitude * (10**-7))
+        nav_payload = nav_payload._replace(lon=longitude *(10**-7))
+        nav_payload = nav_payload._replace(lat=latitude * (10**-7))
+        nav_payload = nav_payload._replace(height = altitude)
         # nav_payload = nav_payload._replace(headMot = head_mot * (10**-5))
         # nav_payload = nav_payload._replace(headAcc = head_acc * (10**-5))
         # nav_payload = nav_payload._replace(pDOP= pos_dop * 0.01)
@@ -751,6 +768,31 @@ class UbloxGps(object):
 
         return nav_payload
 
+    def scale_NAV_COV(self,nav_payload):
+        """
+        This takes the UBX-NAV-COV payload and scales the relevant fields
+        as it's described in the datasheet.
+
+        :return: Scaled verasion of the given payload.
+        :rtype: namedtuple
+        """
+
+        p_NN = nav_payload.posCovNN
+        p_NE = nav_payload.posCovNE
+        p_ND = nav_payload.posCovND
+        p_EE = nav_payload.posCovEE
+        p_ED = nav_payload.posCovED
+        p_DD = nav_payload.posCovDD
+
+        nav_payload = nav_payload._replace(posCovNN=p_NN)
+        nav_payload = nav_payload._replace(posCovNE=p_NE)
+        nav_payload = nav_payload._replace(posCovND=p_ND)
+        nav_payload = nav_payload._replace(posCovEE=p_EE)
+        nav_payload = nav_payload._replace(posCovED=p_ED)
+        nav_payload = nav_payload._replace(posCovDD=p_DD)
+
+
+        return nav_payload
 
 
 

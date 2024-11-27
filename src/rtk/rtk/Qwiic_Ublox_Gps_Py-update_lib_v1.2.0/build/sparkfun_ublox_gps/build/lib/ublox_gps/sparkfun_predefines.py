@@ -3,7 +3,7 @@
 from . import core
 
 __all__ = ['ACK_CLS', 'CFG_CLS', 'ESF_CLS', 'INF_CLS', 'MGA_CLS', 'MON_CLS',
-           'NAV_CLS', 'NAV2_CLS','TIM_CLS', ]
+           'NAV_CLS', 'TIM_CLS', ]
 
 ACK_CLS = core.Cls(0x05, 'ACK', [
     core.Message(0x01, 'ACK', [
@@ -627,29 +627,6 @@ MON_CLS = core.Cls(0x0a, 'MON', [
         #]),
     ]),
 ])
-
-NAV2_CLS = core.Cls(0x29, 'NAV2', [
-    core.Message(0x36, 'COV', [
-        core.Field('iTOW', 'U4'),
-        core.Field('version', 'U1'),
-        core.Field('posCovValid', 'U1'),
-        core.Field('velCovValid', 'U1'),
-        core.PadByte(repeat=6),
-        core.Field('posCovNN', 'R4'),
-        core.Field('posCovNE', 'R4'),
-        core.Field('posCovND', 'R4'),
-        core.Field('posCovEE', 'R4'),
-        core.Field('posCovED', 'R4'),
-        core.Field('posCovDD', 'R4'),
-        core.Field('velCovNN', 'R4'),
-        core.Field('velCovNE', 'R4'),
-        core.Field('velCovND', 'R4'),
-        core.Field('velCovEE', 'R4'),
-        core.Field('velCovED', 'R4'),
-        core.Field('velCovDD', 'R4'),
-    ]),
-])
-
 
 NAV_CLS = core.Cls(0x01, 'NAV', [
     core.Message(0x05, 'ATT', [
