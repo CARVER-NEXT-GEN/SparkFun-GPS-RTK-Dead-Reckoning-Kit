@@ -76,7 +76,7 @@ class GPSNode(Node):
             # Fill GPS message
             self.gps_msg.latitude = self.geo.lat
             self.gps_msg.longitude = self.geo.lon
-            self.gps_msg.altitude = float(self.geo.height)
+            self.gps_msg.altitude = float(self.geo.height * 1000.0)
 
             # Map GNSS fix type
             self.gps_msg.status.status = int(self.geo.fixType)
