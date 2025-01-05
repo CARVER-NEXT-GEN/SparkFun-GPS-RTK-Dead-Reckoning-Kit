@@ -22,7 +22,7 @@ class GPSNode(Node):
         else:
             print("Serial port is not open.")
         self.nav_sat_pub = self.create_publisher(NavSatFix, 'nav_sat_data',10)
-        self.create_timer(0.05,self.timer_callback)
+        self.create_timer(0.2,self.timer_callback)
 
         # For Fix-Position Covariance
 
