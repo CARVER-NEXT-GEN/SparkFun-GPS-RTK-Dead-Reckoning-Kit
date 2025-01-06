@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-from rtk.dummy_module import dummy_function, dummy_var
+from carver_gps.dummy_module import dummy_function, dummy_var
 import rclpy
 from rclpy.node import Node
 
