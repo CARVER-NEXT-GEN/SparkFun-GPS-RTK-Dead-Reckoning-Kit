@@ -32,7 +32,7 @@ To set up the SparkFun GPS-RTK Dead Reckoning Kit with ROS2, follow these steps:
     Change directories to the main setup folder.
 
     ```bash
-    cd SparkFun-GPS-RTK-Dead-Reckoning-Kit
+    cd carver_gps
     ```
 
 3. Run the Quick Install Script:
