@@ -5,9 +5,6 @@ echo "Installing Qwiic UbloxGps Python package . . ."
 
 pip install $INSTALL_DIR
 
-colcon build && source install/setup.bash
-
-echo "source $(pwd)/install/setup.bash" >> ~/.bashrc
 
 
 
